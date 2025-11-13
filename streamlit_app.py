@@ -3,11 +3,21 @@ import requests
 import json
 from typing import List, Dict
 from datetime import datetime
+import dotenv
+import os
+
+dotenv.load_dotenv()
+
+prod = os.getenv("PROD")
+if prod:
+    api_base_url = os.getenv("API_BASE_URL")
+else:
+    api_base_url = "http://localhost:3000"
 
 # Configuration
 API_BASE_URL = st.sidebar.text_input(
     "API Base URL",
-    value="http://localhost:3000",
+    value=api_base_url,
     help="Base URL of the LangGraph API server"
 )
 
