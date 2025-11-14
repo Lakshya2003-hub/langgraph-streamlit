@@ -33,13 +33,13 @@ if 'api_available' not in st.session_state:
 
 # Page configuration
 st.set_page_config(
-    page_title="LangGraph Chat",
+    page_title="Telecrm Sales Assistant",
     page_icon="🤖",
     layout="wide"
 )
 
 # Sidebar
-st.sidebar.title("🤖 LangGraph Chat")
+st.sidebar.title("🤖 Telecrm Sales Assistant")
 st.sidebar.markdown("---")
 st.sidebar.markdown(f"**Thread ID:** `{st.session_state.thread_id}`")
 
@@ -129,8 +129,8 @@ if not st.session_state.messages:
                 })
 
 # Main chat interface
-st.title("🤖 LangGraph Chat Interface")
-st.markdown("Chat with your LangGraph-powered assistant")
+st.title("🤖 Telecrm Sales Assistant")
+st.markdown("Chat with TIA (Telecrm Intelligent Assistant)") 
 
 # Display API status
 if st.session_state.api_available:
